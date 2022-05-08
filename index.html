@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>다이어터 레벨 테스트</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="[다이어터 레벨 테스트]"/>
+    <meta property="og:description" content="24문항으로 이루어진 테스트를 통해 완벽주의자 성향을 도표로 보실 수 있습니다."/>
+    <meta property="og:image" content="http://http://alexk1129.cafe24.com/resource/img/cover-page.jpg"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/resource/css/reset.css" />
+    <link rel="stylesheet" href="/resource/css/index.css" />
+  </head>
+
+  <script src="/resource/lib/jquery-3.5.1-slim.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+  <script src="https://kit.fontawesome.com/6f4d922649.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+  <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+  <script src="/resource/js/index.js"></script>
+  <script src="/resource/js/survey.js"></script>
+
+  <body>
+    <section class="main" id="main">
+      <div class="container bg">
+        <div class="wrapper pd100">
+          <p class="title shadow">다이어터 레벨 테스트</p>
+          <p class="subtitle shadow">Dieter Level Test</p>
+          <p class="content box">- 다이어트와 자기관리는 평생 하는 것 -</p>
+          <p class="content box"> 
+            한 장의 바디프로필 사진이 아니라, 동영상으로 계속되는 “갓생” 살이에 도전하는 당신, <br>
+            평생 함께할 내 몸을 최선의 상태로 만들고 유지하기 위해서 당신은<br>
+            갓생 살이에 얼마나 준비됐나요?
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="wrapper pd20">
+          <div class="form">
+            <input type="text" placeholder="당신의 닉네임" id="name">
+            <select id="gender">
+              <option value="1">남</option>
+              <option value="2">여</option>
+            </select>
+          </div>
+          <div class="button">
+            <p onclick="startTest()">테스트 시작하기</p>
+          </div>
+          <p class="small__info">
+            20개 질문이 주어집니다. 검사를 마치면 당신의 '다이어터 레벨'과 갓생살이 여정을 위한 현위치 그리고 tip을 드립니다.<br>
+            테스트 결과가 다이어트 및 자기관리 <strong>수요 이해 목적으로 사용될 수 있습니다.</strong> 익명성이 보장됩니다.
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="wrapper">
+          <div class="link_box mt150 mb30">
+            <div class="link_btn" id="copy_kakao">
+              <div class="link_icon">
+                  <i class="fas fa-comment"></i>
+              </div>
+              <span class="link_text">카카오톡</span>
+          </div>
+          <!-- <div class="link_btn" id="copy_twitter">
+              <div class="link_icon">
+                  <i class="fas fa-dove"></i>
+              </div>
+              <span class="link_text">트위터</span>
+          </div> -->
+          <div class="link_btn" id="copy_link">
+              <div class="link_icon">
+                  <i class="fas fa-link"></i>
+              </div>
+              <span class="link_text">링크복사</span>
+              <input type="hidden" id="url"/>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="survey">
+      <div class="container bgcolor">
+        <div class="wrapper pd20">
+          <p class="content box">
+            다음은 다이어트와 자기관리를 할 때 생길 수 있는 생각과 감정들입니다.<br>
+            <u>각 문항에 대해 동의하시는 정도를 체크</u>해 주세요.
+          </p>
+          <p class="content box">
+            여기서 <u>다이어트</u>란 체중을 조절하거나 건강상태를 개선하기 위하여 운동 및 식이조절을 하는 것이며,<br>
+            <u>자기관리</u>란 다이어트뿐만 아니라, 건강한 생활을 유지하면서 자기 삻음 성장,발전시키기 위해 지속적으로 노력하고 실천하는 것을 의미합니다.
+          </p>
+          <p class="content shadow">갓생 살이 도전을 위해 나는 얼마나 준비됐을까?</p>
+        </div>
+      </div>
+      <div class="container survey pd60" id="section01">
+      </div>
+      <div class="container survey pd60" id="section02">
+      </div>
+      <div class="container survey pd60" id="section03">
+      </div>
+      <div class="container survey pd60" id="section04">
+      </div>
+    </section>
+  </body>
+</html>

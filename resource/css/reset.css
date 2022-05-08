@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@font-face{
+  font-family: 'SimSun-ExtB';
+  src: url(../img/resource/font/simsunb.ttf) format('truetype');
+  font-weight: normal;
+}
+/* YUI 3.5.0 reset.css (http://developer.yahoo.com/yui/3/cssreset/) - https://cssdeck.com/blog/ */
+html{color:#333333;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
+
+*{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  letter-spacing: -1.2px;
+  color: #000000;
+  word-break: keep-all;
+  box-sizing: border-box;
+}
+body{-webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; overflow-x: hidden;}
+html, body{overflow-x: hidden;}
+div{box-sizing: border-box;}
+input, textarea{outline: none;}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input{
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  outline:0;
+  box-shadow:none;
+  border:none;
+}
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+select::-ms-expand { display: none; }
+a{text-decoration: none;}
+i{font-style: normal;}
+:root{
+  --max-width: 600px;
+  --font-regular: 400;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --bg-color: #ffe4e1;
+  --content-color: #ffccc3; 
+  --content-deep-color: #f28876;
+}
+video{max-width: 100%}
+
+.link_box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.link_box.mt150{
+  margin-top: 150px;
+}
+.link_box.mb30{
+  margin-bottom: 30px;
+}
+.link_box .link_btn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.link_box .link_btn .link_icon{
+  width: 55px;
+  height: 55px;
+  background-color: var(--content-deep-color);
+  border-radius: 50px;
+  position: relative;
+}
+.link_box .link_btn .link_icon i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 20px;
+}
+.link_box .link_btn span{
+  display: inline-block;
+  padding-top: 5px;
+  width: 100%;
+  text-align: center;
+}
