@@ -19,21 +19,25 @@ function setCurrentClass(level, score){
   switch(level){
     case 'level4':
       cls = 'level4-1'
+      break
     case 'level3':
       if(score > 20 && score <= 22) cls = 'level3-1'
       else if(score > 22 && score <= 25) cls = 'level3-2'
       else if(score > 25 && score <= 27) cls = 'level3-3'
       else cls = 'level3-4'
+      break
     case 'level2':
       if(score <= 16) cls = 'level2-1'
       else if(score > 16 && score <= 17) cls = 'level2-2'
       else if(score > 17 && score <= 18) cls = 'level2-3'
       else cls = 'level2-4'
+      break
     case 'level1':
       if(score <= 16) cls = 'level1-1'
       else if(score > 16 && score <= 17) cls = 'level1-2'
       else if(score > 17 && score <= 18) cls = 'level1-3'
       else cls = 'level1-4'
+      break
   }
 
   $(`#${level} .current__img`).addClass(cls)
@@ -78,6 +82,7 @@ function sendData(){
       type: "GET",
       url: "https://script.google.com/macros/s/AKfycbwp1KyYdUe-kDryg0Dole3IcSsH_O8uMUyuhY_80k3JDCbsaMDfvNgNQfDkTU77GgJ-FA/exec",
       data: {
+        "테스트시점": localStorage.getItem('surveyDate'),
         "이름": name,
         "힘든점": keyword1,
         "더 필요한 것": keyword2,

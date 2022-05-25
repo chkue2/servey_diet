@@ -31,6 +31,9 @@
   color: #ffffff;
   text-shadow: 1px 3px 6px #888888;
 }
+.shadow__white{
+  text-shadow: 0px 0px 4px white;
+}
 .subtitle{
   font-size: 28px;
   text-align: center;
@@ -55,7 +58,7 @@
   font-weight: var(--font-bold);
 }
 .content.shadow{
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
   margin-top: 50px;
   color: #ffffff;
@@ -173,6 +176,9 @@
   .wrapper.pd20{
     padding-left: 16px;
     padding-right: 16px;
+  }
+  .content.shadow{
+    font-size: 18px;
   }
   .form{
     width: 100%;

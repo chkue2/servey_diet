@@ -33,7 +33,7 @@
   z-index: 1;
 }
 .map .current__img{
-  width: 25px;
+  width: 35px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -41,61 +41,62 @@
   z-index: 2;
 }
 .map .current__img.level4-1{
-  top: 45%;
-  left: 56%;
+  top: 44%;
+  left: 48%;
 }
 .map .current__img.level3-1{
   top: 55%;
-  left: 75%;
+  left: 69%;
 }
 .map .current__img.level3-2{
   top: 50%;
-  left: 72%;
+  left: 65%;
 }
 .map .current__img.level3-3{
   top: 48%;
-  left: 68%;
+  left: 60%;
 }
 .map .current__img.level3-4{
-  top: 46%;
-  left: 63%;
+  top: 47%;
+  left: 54%;
 }
 .map .current__img.level2-1{
-  top: 70%;
-  left: 33%;
+  top: 67%;
+  left: 23%;
 }
 .map .current__img.level2-2{
-  top: 63%;
-  left: 45%;
+  top: 60%;
+  left: 37%;
 }
 .map .current__img.level2-3{
-  top: 58%;
-  left: 55%;
+  top: 57%;
+  left: 48%;
 }
 .map .current__img.level2-4{
-  top: 57%;
-  left: 65%;
+  top: 55%;
+  left: 58%;
 }
 .map .current__img.level1-1{
-  top: 92%;
-  left: 50%;
+  top: 88%;
+  left: 38%;
 }
 .map .current__img.level1-2{
-  top: 92%;
-  left: 46%;
+  top: 84%;
+  left: 34%;
 }
 .map .current__img.level1-3{
-  top: 89%;
-  left: 41%;
+  top: 80%;
+  left: 30%;
 }
 .map .current__img.level1-4{
-  top: 84%;
-  left: 36%;
+  top: 75%;
+  left: 26%;
 }
 .intro{
   color: #052f36;
   font-size: 16px;
-  margin: 20px 0;
+  margin-top: 40px;
+  margin-bottom: 20px;
   text-align: center;
   font-weight: var(--font-semibold);
 }
@@ -140,6 +141,12 @@
   font-size: 16px;
   font-weight: var(--font-semibold);
 }
+.tip b strong{
+  font-size: 16px;
+  font-weight: var(--font-semibold);
+  color: var(--content-deep-color);
+}
+.tip__container .tip:nth-child(1){margin-top: 55px;}
 .res__img{
   width: 100%;
 }
@@ -194,6 +201,9 @@
   }
   .keyword{
     font-size: 15px;
+  }
+  .map .current__img{
+    width: 30px;
   }
   .result{
     padding-top: 40px;

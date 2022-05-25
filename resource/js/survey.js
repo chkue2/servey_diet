@@ -34,6 +34,8 @@ let score = {
 }
 
 $(document).ready(() => {
+  const date = moment().format('YYYY-MM-DD HH:mm:ss')
+  localStorage.setItem('surveyDate', date)
   $(`#section0${section}`).show()
   setQuestion(question.slice(0, 5), 'section01')
   setQuestion(question.slice(5, 10), 'section02')
@@ -108,6 +110,8 @@ function startTest(){
 
   $('#main').hide()
   $('#survey').show()
+
+  $('html, body').stop().animate({scrollTop: 0}, 500)
 }
 
 function nextStep(){
@@ -154,13 +158,13 @@ function moveToResult(){
     } else {
       level = 'level4-2'
     }
-  } else if(score.step1 > 18 && score.step2 <= 20){
+  } else if(score.step1 <= 18 && score.step2 > 20){
     if(getAverage(score.step3, 6) - getAverage(score.step4, 4) >= 0){
       level = 'level3-1'
     } else {
       level = 'level3-2'
     }
-  } else if(score.step1 <= 18 && score.step2 > 20){
+  } else if(score.step1 > 18 && score.step2 <= 20){
     if(getAverage(score.step3, 6) - getAverage(score.step4, 4) >= 0){
       level = 'level2-1'
     } else {
@@ -183,6 +187,7 @@ function moveToResult(){
     type: "GET",
     url: "https://script.google.com/macros/s/AKfycbzsKYsj--9ls_IqU6of0avATFRrSq_qa0PAgSpa52_SXIoFn57h-TsyyW-De_lYZsguaQ/exec",
     data: {
+      "테스트시점": localStorage.getItem('surveyDate'),
       "이름": user.name,
       "성별": user.gender,
       "요인1": score.step1,
